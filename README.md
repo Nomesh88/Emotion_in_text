@@ -57,3 +57,15 @@ Dataset name: Emotion.csv
 
 # Output
 Accuracy: 0.8632339235787512
+
+# Testing the data on Custom input
+    #testing the data
+    from collections import Counter
+    import numpy as np
+    sen1="hi i am excited a good news with you"
+    sen1=vectorizer.transform(sen1.split())
+    classifier.predict(sen1)
+    b = Counter(classifier.predict(sen1))
+    print (b.most_common()[0][0])
+# Output
+'anger'
